@@ -8,7 +8,7 @@
 
 import UIKit
 
-class HAWriter: NSObject {
+public class HAWriter: NSObject {
     
     //Yazar id'sini temsil eder.
     public var Id:String? = ""
