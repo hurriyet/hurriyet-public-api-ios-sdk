@@ -8,7 +8,7 @@
 
 import UIKit
 
-class HAPhotoGallery: HABaseObject {
+public class HAPhotoGallery: HABaseObject {
     //Haberle ilişkilendirilmiş etiketleri temsil eder.
     public var Tags:Array<String>? = []
     //Haberin editörünü temsil eder.
