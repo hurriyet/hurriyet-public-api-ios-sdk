@@ -1,0 +1,6 @@
+use_frameworks!
+target 'HurriyetOpenApi_Tests' do
+  pod 'HurriyetOpenApi', :path => '../'
+  
+  
+end
