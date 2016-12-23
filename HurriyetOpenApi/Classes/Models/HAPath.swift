@@ -8,7 +8,7 @@
 
 import UIKit
 
-class HAPath: NSObject {
+public class HAPath: NSObject {
     
     //Dizin id'sini temsil eder.
     public var Id:String? = ""
