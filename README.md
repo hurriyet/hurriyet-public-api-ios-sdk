@@ -13,11 +13,22 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 
 ## Installation
 
-HurriyetOpenApi is available through [CocoaPods](http://cocoapods.org). To install
-it, simply add the following line to your Podfile:
+HurriyetOpenApi will be available through [CocoaPods](http://cocoapods.org). To install
+it now, simply add the following line to your Podfile:
 
 ```ruby
 pod 'HurriyetOpenApi' ,:git=> 'https://github.com/hurriyet/hurriyet-public-api-ios-sdk.git', :branch => 'master'
+```
+If you get Swift version error please add these to end of the podfile
+
+```ruby
+post_install do |installer|
+   installer.pods_project.targets.each do |target|
+       target.build_configurations.each do |config|
+           config.build_settings['SWIFT_VERSION'] = '3.0'
+       end
+   end
+end
 ```
 
 ## Author
