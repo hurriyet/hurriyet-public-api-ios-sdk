@@ -8,7 +8,7 @@
 
 import UIKit
 
-class HADate: NSObject {
+public class HADate: NSObject {
     public var Date:String?
     init(dictionary: Dictionary<String, Any>) {
         super.init()
