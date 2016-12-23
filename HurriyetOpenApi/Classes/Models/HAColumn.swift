@@ -8,7 +8,7 @@
 
 import UIKit
 
-class HAColumn: HABaseObject {
+public class HAColumn: HABaseObject {
     //Köşe yazarının tam adını temsil eder.
     public var FullName:String? = ""
     //Köşe yazarının id'sini temsil eder. Bu id üzerinden tekil sorgu alınabilir.
