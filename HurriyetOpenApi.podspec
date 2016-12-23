@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
   s.name             = 'HurriyetOpenApi'
   s.version          = '0.1.0'
-  s.summary          = 'A short description of HurriyetOpenApi.'
+  s.summary          = 'Hurriyet Mobil Open Api'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -17,15 +17,13 @@ Pod::Spec.new do |s|
 #   * Write the description between the DESC delimiters below.
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
-  s.description      = <<-DESC
-TODO: Add long description of the pod here.
-                       DESC
+  s.description      = 'Hurriyet Mobil Open Api written in Swift'
 
-  s.homepage         = 'https://github.com/<GITHUB_USERNAME>/HurriyetOpenApi'
+  s.homepage         = 'https://github.com/hurriyet/hurriyet-public-api-ios-sdk'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'Hakkı Yiğit Yener' => 'hyyener@hurriyet.com.tr' }
-  s.source           = { :git => 'https://github.com/<GITHUB_USERNAME>/HurriyetOpenApi.git', :tag => s.version.to_s }
+  s.author           = { 'Hurriyet Mobile Team' => 'MobilEkip@hurriyet.com.tr' }
+  s.source           = { :git => 'https://github.com/hurriyet/hurriyet-public-api-ios-sdk.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '8.0'
