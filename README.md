@@ -17,12 +17,12 @@ HurriyetOpenApi is available through [CocoaPods](http://cocoapods.org). To insta
 it, simply add the following line to your Podfile:
 
 ```ruby
-pod "HurriyetOpenApi"
+pod 'HurriyetOpenApi' ,:git=> 'https://github.com/hurriyet/hurriyet-public-api-ios-sdk.git', :branch => 'master'
 ```
 
 ## Author
 
-Hakkı Yiğit Yener, hyyener@hurriyet.com.tr
+Hurriyet Mobile Team, MobilEkip@hurriyet.com.tr
 
 ## License
 
