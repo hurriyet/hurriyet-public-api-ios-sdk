@@ -8,7 +8,7 @@
 
 import UIKit
 
-class HAPage: NSObject {
+public class HAPage: NSObject {
     
     //Sayfa id'sini temsil eder.
     public var Id:String? = ""
