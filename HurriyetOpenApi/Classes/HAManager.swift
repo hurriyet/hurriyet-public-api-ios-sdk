@@ -25,7 +25,7 @@ public class HAManager: NSObject {
     {
         if let apiKeyValue = self.apiKey
         {
-            let url = "\(baseUrl)/\(path)?\(self.urlBuilder(Filter: filter, SelectableList: selectableList, ResultCount: resultCount))"
+            let url = "\(baseUrl)/\(path)?\(self.urlBuilder(Filter: filter, SelectableList: selectableList, ResultCount: resultCount))".addingPercentEncoding(withAllowedCharacters: NSCharacterSet.urlQueryAllowed)!
             let headers: HTTPHeaders = [
                 "accept": "application/json",
                 "apikey": apiKeyValue]
@@ -246,12 +246,16 @@ public class HAManager: NSObject {
         self.makeRequest(Filter: filter, SelectableList: selectableList, ResultCount: resultCount, Path: "\(kSearch)/\(searchString)") { (response:DataResponse<Any>) in
             var articles = Array<HAArticle>()
             
-            if  let json = response.result.value as? Array<[String: Any]>
+            if  let json = response.result.value as? [String: Any]
             {
-                for item in json
+                if let resultArray = json["List"] as? Array<[String : Any]>
                 {
-                    articles.append(HAArticle.init(dictionary:item))
+                    for item in resultArray
+                    {
+                        articles.append(HAArticle.init(dictionary:item))
+                    }
                 }
+                
             }
             complationHandler(articles)
         }
