@@ -240,6 +240,23 @@ public class HAManager: NSObject {
         }
     }
     
+    public func searchArticles(Filter filter:HAFilter?, SelectableList selectableList:Array<HASelectable>?, ResultCount resultCount:Int?, complationHandler:@escaping (_ result:Array<HAArticle>) -> Void)
+    {
+        
+        self.makeRequest(Filter: filter, SelectableList: selectableList, ResultCount: resultCount, Path: kSearch) { (response:DataResponse<Any>) in
+            var articles = Array<HAArticle>()
+            
+            if  let json = response.result.value as? Array<[String: Any]>
+            {
+                for item in json
+                {
+                    articles.append(HAArticle.init(dictionary:item))
+                }
+            }
+            complationHandler(articles)
+        }
+    }
+    
     private func urlBuilder(Filter filter:HAFilter?, SelectableList selectableList:Array<HASelectable>?, ResultCount resultCount:Int?) -> String
     {
         var queryParameters:Array<String> = []
